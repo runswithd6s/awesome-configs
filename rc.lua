@@ -274,7 +274,11 @@ globalkeys = awful.util.table.join(
     -- Volume Keys (see ~/.config/awesome/volume.lua)
     volume_up,
     volume_down,
-    volume_mute
+    volume_mute,
+
+    -- Brightness
+    awful.key({ }, "XF86MonBrightnessDown", function () awful.util.spawn("xbacklight -dec 15") end),
+    awful.key({ }, "XF86MonBrightnessUp", function () awful.util.spawn("xbacklight -inc 15") end)
 )
 
 clientkeys = awful.util.table.join(
